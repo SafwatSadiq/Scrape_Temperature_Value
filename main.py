@@ -8,7 +8,7 @@ if not os.path.exists("data.db"):
     with open("data.db", 'w') as file:
         connection = sqlite3.connect("data.db")
         cursor = connection.cursor()
-        cursor.execute("CREATE TABLE temperature (date TEXT, temperature INTEGER)")
+        cursor.execute("CREATE TABLE temperature (date TEXT, temperature REAL)")
 else:
     connection = sqlite3.connect("data.db") 
 
